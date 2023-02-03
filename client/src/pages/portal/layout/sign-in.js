@@ -1,3 +1,5 @@
+import anime from 'https://cdn.skypack.dev/react-anime@4.0.2';
+
 var current = null;
 document.querySelector('#email').addEventListener('focus', function(e) {
   if (current) current.pause();
