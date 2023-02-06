@@ -1,8 +1,11 @@
-import anime from 'https://cdn.skypack.dev/react-anime@4.0.2';
+//import anime from 'https://cdn.skypack.dev/react-anime@4.0.2';
+import anime from './anime.js';
+console.log("sign-in.js is being loaded");
 
 var current = null;
 document.querySelector('#email').addEventListener('focus', function(e) {
   if (current) current.pause();
+  console.log("Email animation");
   current = anime({
     targets: 'path',
     strokeDashoffset: {
@@ -16,6 +19,7 @@ document.querySelector('#email').addEventListener('focus', function(e) {
       easing: 'easeOutQuart'
     }
   });
+  console.log("Email animation - end");
 });
 document.querySelector('#password').addEventListener('focus', function(e) {
   if (current) current.pause();
